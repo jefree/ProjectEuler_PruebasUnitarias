@@ -1,5 +1,8 @@
 import unittest
 
+def es_par(num):
+	return num % 2 == 0
+
 class ParTest(unittest.TestCase):
 
 	def test_prueba_que_2_es_par(self):
@@ -19,3 +22,6 @@ class ParTest(unittest.TestCase):
 
 	def test_prueba_que_5_no_es_par(self):
 		self.assertEqual(es_par(5), False)
+
+if __name__ == '__main__':
+	unittest.main()
