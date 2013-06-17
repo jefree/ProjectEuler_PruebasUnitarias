@@ -1,5 +1,6 @@
 import unittest
 
+
 def es_par(num):
 	return num % 2 == 0
 
@@ -22,6 +23,17 @@ class ParTest(unittest.TestCase):
 
 	def test_prueba_que_5_no_es_par(self):
 		self.assertEqual(es_par(5), False)
+
+class NTerminosFibonacciTest(unittest.TestCase):
+
+	def test_prueba_que_los_3_primeros_terminos_fibonacci_son(self):
+		self.assertEqual(fibo(3), [1,2,3])
+
+	def test_prueba_que_los_7_primeros_terminos_fibonacci_son(self):
+		self.assertEqual(fibo(7), [1,2,3,5,8,13,21])
+
+	def test_prueba_que_los_15_primeros_terminos_fibonacci_son(self):
+		self.assertEqual(fibo(15), [1,2,3,5,8,13,21,34,55,89,144,233,377,610,987])
 
 if __name__ == '__main__':
 	unittest.main()
