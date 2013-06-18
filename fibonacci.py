@@ -47,5 +47,16 @@ class NTerminosFibonacciTest(unittest.TestCase):
 	def test_prueba_que_los_15_primeros_terminos_fibonacci_son(self):
 		self.assertEqual(fibo(15), [1,2,3,5,8,13,21,34,55,89,144,233,377,610,987])
 
+class TerminosFibonacciHasta(unittest.TestCase):
+
+	def test_prueba_que_los_terminos_fibonacci_hasta_12_son(self):
+		self.assertEqual(fiboHasta(12), [1,2,3,5,8])
+
+	def test_prueba_que_los_terminos_fibonacci_hasta_40_son(self):
+		self.assertEqual(fiboHasta(40), [1,2,3,5,8,13,21,34])
+
+	def test_prueba_que_los_terminos_fibonacci_hasta_1000_son(self):
+		self.assertEqual(fiboHasta(1000), [1,2,3,5,8,13,21,34,55,89,144,233,377,610,987])
+
 if __name__ == '__main__':
 	unittest.main()
