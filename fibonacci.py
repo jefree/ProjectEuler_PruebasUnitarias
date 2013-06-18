@@ -54,16 +54,16 @@ class ParTest(unittest.TestCase):
 		self.assertEqual(es_par(5), False)
 
 	def test_prueba_que_1628_es_par(self):
-		self.assertEqual(es_par(2), True)
+		self.assertEqual(es_par(1628), True)
 
 	def test_prueba_que_818189_no_es_par(self):
 		self.assertEqual(es_par(818189), False)
 
-	def test_prueba_que_2_es_par(self):
-		self.assertEqual(es_par(2), True)
+	def test_prueba_que_10000_es_par(self):
+		self.assertEqual(es_par(10000), True)
 
-	def test_prueba_que_5_no_es_par(self):
-		self.assertEqual(es_par(5), False)
+	def test_prueba_que_99999_no_es_par(self):
+		self.assertEqual(es_par(99999), False)
 
 class NTerminosFibonacciTest(unittest.TestCase):
 
