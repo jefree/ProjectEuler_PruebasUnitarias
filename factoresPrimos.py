@@ -52,5 +52,10 @@ class EsFactorPrimoTest(unittest.TestCase):
 	def test_prueba_que_29_es_factor_primo_de_13195(self):
 		self.assertEqual(es_factor_primo(29, 13195), True)
 
+class FactoresPrimosDeTest(unittest.TestCase):
+
+	def test_prueba_que_los_factores_primos_de_13195_son(self):
+		self.assertEqual(factores_primos_de(13195), [5,7,13,29])
+
 if __name__ == '__main__':
 	unittest.main()
