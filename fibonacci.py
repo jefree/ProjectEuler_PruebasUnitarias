@@ -1,8 +1,20 @@
 import unittest
 
-
 def es_par(num):
 	return num % 2 == 0
+
+def fibo(num, lista=[]):
+
+	if num == 1:
+		return [1]
+
+	if num == 2:	
+		lista = fibo(1)
+		return lista + [2]
+
+	lista = fibo(num-1)
+
+	return lista+[lista[-1]+lista[-2]]
 
 class ParTest(unittest.TestCase):
 
