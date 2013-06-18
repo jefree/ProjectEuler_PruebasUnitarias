@@ -33,6 +33,18 @@ def fiboHasta(limite):
 
 	return lista
 
+def sumaFiboParesHasta(num):
+
+	lista = fiboHasta(num)
+
+	pares = []
+
+	for n in lista:
+		if es_par(n):
+			pares.append(n)
+
+	return sum(pares)
+
 class ParTest(unittest.TestCase):
 
 	def test_prueba_que_2_es_par(self):
