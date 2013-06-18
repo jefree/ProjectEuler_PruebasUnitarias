@@ -1,7 +1,7 @@
 import unittest
 
 def es_factor(num1, num2):
-	return num2 % num1 == 0
+	return False if num1==0 else num2 % num1 == 0
 
 def es_factor_de_tres_o_cinco(num1):
 	
