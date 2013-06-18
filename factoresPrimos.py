@@ -31,5 +31,22 @@ class EsPrimoTest(unittest.TestCase):
 	def test_prueba_que_0_no_es_primo(self):
 		self.assertEqual(es_primo(0), False)
 
+class EsFactorPrimoTest(unittest.TestCase):
+
+	def test_prueba_que_2_es_factor_primo_de_100(self):
+		self.assertEqual(es_factor_primo(2, 100), True)
+
+	def test_prueba_que_13_es_factor_primo_de_91(self):
+		self.assertEqual(es_factor_primo(13, 91), True)
+
+	def test_prueba_que_10_no_es_factor_primo_de_2000(self):
+		self.assertEqual(es_factor_primo(10, 2000), False)
+
+	def test_prueba_que_7_no_es_factor_primo_de_23(self):
+		self.assertEqual(es_factor_primo(7, 23), False)
+
+	def test_prueba_que_29_es_factor_primo_de_13195(self):
+		self.assertEqual(es_factor_primo(29, 13195), True)
+
 if __name__ == '__main__':
 	unittest.main()
