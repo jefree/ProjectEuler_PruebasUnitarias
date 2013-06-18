@@ -1,5 +1,5 @@
 import unittest
-import multiplosTest
+from multiplosTest import es_factor
 
 def es_primo(numero):
 
@@ -10,6 +10,10 @@ def es_primo(numero):
 			factores += 1
 
 	return factores == 1
+
+def es_factor_primo(factor, numero):
+	return es_factor(factor, numero) and es_primo(factor)
+
 
 class EsPrimoTest(unittest.TestCase):
 
