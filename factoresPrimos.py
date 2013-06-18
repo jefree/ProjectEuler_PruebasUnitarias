@@ -14,6 +14,15 @@ def es_primo(numero):
 def es_factor_primo(factor, numero):
 	return es_factor(factor, numero) and es_primo(factor)
 
+def factores_primos_de(numero):
+
+	resultado = []
+
+	for i in range(numero):
+		if es_factor_primo(i, numero):
+			resultado.append(i)
+
+	return resultado
 
 class EsPrimoTest(unittest.TestCase):
 
@@ -55,7 +64,7 @@ class EsFactorPrimoTest(unittest.TestCase):
 class FactoresPrimosDeTest(unittest.TestCase):
 
 	def test_prueba_que_los_factores_primos_de_13195_son(self):
-		self.assertEqual(factores_primos_de(13195), [5,7,13,29])
+		self.assertEqual(factores_primos_de(13195), [1,5,7,13,29])
 
 if __name__ == '__main__':
 	unittest.main()
