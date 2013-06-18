@@ -16,6 +16,23 @@ def fibo(num, lista=[]):
 
 	return lista+[lista[-1]+lista[-2]]
 
+def fiboHasta(limite):
+
+	continuar = True
+	contador = 1
+
+	while continuar:
+
+		lista = fibo(contador)
+
+		if lista[-1] > limite:
+			continuar = False
+			lista = lista[:-1]
+		else:
+			contador += 1
+
+	return lista
+
 class ParTest(unittest.TestCase):
 
 	def test_prueba_que_2_es_par(self):
