@@ -17,11 +17,14 @@ def es_factor_primo(factor, numero):
 def factores_primos_de(numero):
 
 	resultado = []
+	i = 1
 
-	for i in range(numero):
+	while i < numero: 
 		if es_factor_primo(i, numero):
 			resultado.append(i)
 
+		i += 1
+		
 	return resultado
 
 class EsPrimoTest(unittest.TestCase):
