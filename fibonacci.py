@@ -75,5 +75,13 @@ class TerminosFibonacciHasta(unittest.TestCase):
 	def test_prueba_que_los_terminos_fibonacci_hasta_1000_son(self):
 		self.assertEqual(fiboHasta(1000), [1,2,3,5,8,13,21,34,55,89,144,233,377,610,987])
 
+class SumaTerminosFibonacciParesHasta(unittest.TestCase):
+
+	def test_prueba_que_los_terminos_fibonacci_pares_hasta_10_suman_10(self):
+		self.assertEqual(sumaFiboParesHasta(10),10)
+
+	def test_prueba_que_los_terminos_fibonacci_pares_hasta_1000_suman_798(self):
+		self.assertEqual(sumaFiboParesHasta(1000),798)
+
 if __name__ == '__main__':
 	unittest.main()
